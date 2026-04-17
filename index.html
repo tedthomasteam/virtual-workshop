@@ -321,14 +321,14 @@
             padding: 60px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.1);
             border-radius: 8px;
-            text-align: center;
         }
         .who-ted-box .ted-photo {
-            width: 300px;
-            height: 300px;
+            float: right;
+            width: 250px;
+            height: 250px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 auto 30px;
+            margin: 0 0 20px 30px;
         }
         .who-ted-box h2 {
             font-size: 36px;
@@ -348,6 +348,18 @@
             line-height: 1.6;
         }
         .who-ted-box .bio p { margin-bottom: 18px; }
+        .who-ted-box .bio::after { content: ""; display: table; clear: both; }
+        .lifestyle-images {
+            display: flex;
+            gap: 15px;
+            margin: 30px 0 10px;
+        }
+        .lifestyle-images img {
+            flex: 1;
+            border-radius: 8px;
+            object-fit: cover;
+            max-height: 200px;
+        }
 
         /* ===== 8. PRICING BOX ===== */
         .pricing-section {
@@ -548,6 +560,74 @@
             color: #888;
             font-style: italic;
             margin-top: 15px;
+        }
+
+        /* ===== 10b. VIDEO TESTIMONIALS ===== */
+        .video-testimonials {
+            background: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .video-testimonials h2 {
+            font-size: 38px;
+            color: #104E97;
+            margin-bottom: 40px;
+        }
+        .video-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .video-card {
+            width: 280px;
+            text-align: center;
+        }
+        .video-card .video-thumb {
+            position: relative;
+            cursor: pointer;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+        .video-card .video-thumb img {
+            width: 100%;
+            display: block;
+        }
+        .video-card .video-thumb .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(16, 78, 151, 0.85);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .video-card .video-thumb .play-btn::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 0 10px 18px;
+            border-color: transparent transparent transparent #fff;
+            margin-left: 3px;
+        }
+        .video-card .vid-name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            color: #104E97;
+            margin-bottom: 3px;
+        }
+        .video-card .vid-location {
+            font-size: 14px;
+            color: #666;
         }
 
         /* ===== 11. WHAT COMES AFTER ===== */
@@ -780,7 +860,13 @@
 
             .who-ted-box { padding: 30px 20px; }
             .who-ted-box .ted-photo { width: 200px; height: 200px; }
+            .who-ted-box .ted-photo { float: none; display: block; margin: 0 auto 20px; }
             .who-ted-box .bio { font-size: 17px; }
+            .lifestyle-images { flex-direction: column; gap: 10px; }
+            .lifestyle-images img { max-height: none; }
+
+            .video-grid { gap: 20px; }
+            .video-card { width: 100%; max-width: 320px; }
 
             .pricing-box { padding: 25px 15px; }
             .pricing-box h1 { font-size: 28px; }
@@ -955,14 +1041,20 @@
 <!-- ===== 7. ABOUT TED ===== -->
 <section class="who-ted" style="margin-top: 60px;">
     <div class="who-ted-box">
-        <img class="ted-photo" src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2025/04/wwr-ty-img-4.png?strip=all" alt="Ted Thomas">
         <h2>Who is Ted Thomas?</h2>
         <h3>America's leading authority on tax defaulted property investing for over 30 years</h3>
         <div class="bio">
+            <img class="ted-photo" src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2025/04/wwr-ty-img-4.png?strip=all" alt="Ted Thomas">
             <p>My name is Ted Thomas. I've been teaching tax lien certificate and tax deed investing since the early 1990s. I'm a published author, and I've maintained a 4.8 Google Rating, which is nearly unheard of in the investment education space.</p>
             <p>After watching my parents work hard their whole lives and die almost broke, I decided to dedicate myself to finding an investment strategy that ordinary people could actually use. Tax defaulted property investing got me through multiple financial crises: recessions, inflation, market crashes. The 200-year-old government program behind it doesn't care what the stock market is doing.</p>
             <p>I've been called America's foremost authority on tax defaulted property investing, and I've been doing this for over 30 years, longer than anyone else teaching in this space. I saw it go from mimeographed county handouts to online auctions. The technology changed, but the fundamentals of this 200-year-old program are the same.</p>
             <p>The only pushback I've ever gotten was from the big investment community (mutual fund companies and the like) who didn't like me showing everyday people that these returns were possible.</p>
+            <p>This is a home-based business you can run from anywhere. Over 20% of my students live and work in Canada. You can do this from your kitchen table, a coffee shop, or a beach.</p>
+            <div class="lifestyle-images">
+                <img src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2020/08/canada-waving-flag.jpg?strip=all" alt="Canadian flag">
+                <img src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2020/08/woman-laptop-beach.jpg?strip=all" alt="Woman working on laptop at beach">
+                <img src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2020/08/couple-laptop-coffee-shop.jpg?strip=all" alt="Couple working at coffee shop">
+            </div>
             <p><strong>Ted Thomas</strong></p>
         </div>
     </div>
@@ -1053,6 +1145,39 @@
             </tbody>
         </table>
         <p class="schedule-note">Speakers and schedule subject to change.</p>
+    </div>
+</section>
+
+<!-- ===== 10b. VIDEO TESTIMONIALS ===== -->
+<section class="video-testimonials">
+    <div class="container">
+        <h2>Hear from people who've attended Ted's events</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <a href="https://player.vimeo.com/video/388941315/" target="_blank" class="video-thumb">
+                    <img src="https://i.vimeocdn.com/video/852422588-1a9f40b6f3698ca05480864c961262b4ddd1e76c1157fef6111c4a8372621717-d_640x360?r=pad" alt="Michael Nunez testimonial">
+                    <div class="play-btn"></div>
+                </a>
+                <div class="vid-name">Michael Nunez</div>
+                <div class="vid-location">Brooklyn, NY</div>
+            </div>
+            <div class="video-card">
+                <a href="https://player.vimeo.com/video/388940592/" target="_blank" class="video-thumb">
+                    <img src="https://i.vimeocdn.com/video/852421561-ba3f0ace325fbb649107fb6fda61abb7a971a25395d2596df8ad25a94ab3c485-d_640x360?r=pad" alt="Nick Oliver testimonial">
+                    <div class="play-btn"></div>
+                </a>
+                <div class="vid-name">Nick Oliver</div>
+                <div class="vid-location">Tasmania, Australia</div>
+            </div>
+            <div class="video-card">
+                <a href="https://player.vimeo.com/video/388946478/" target="_blank" class="video-thumb">
+                    <img src="https://i.vimeocdn.com/video/852430008-516bc93e33c37c657a0859d7a24c2d6c8306c75dc5793f94795bb9dfc3b38296-d_640x360?r=pad" alt="Rupi Sian testimonial">
+                    <div class="play-btn"></div>
+                </a>
+                <div class="vid-name">Rupi Sian</div>
+                <div class="vid-location">Ontario, Canada</div>
+            </div>
+        </div>
     </div>
 </section>
 
