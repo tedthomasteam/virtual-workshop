@@ -629,6 +629,9 @@
             font-size: 14px;
             color: #666;
         }
+        /* Prevent lazy-load plugins from injecting inline Vimeo iframes inside our thumbnails */
+        .video-thumb iframe { display: none !important; }
+        .video-thumb .perfmatters-lazy-youtube { display: none !important; }
 
         /* Video Lightbox */
         .video-lightbox {
@@ -1196,24 +1199,24 @@
         <h2>Hear from people who've attended Ted's events</h2>
         <div class="video-grid">
             <div class="video-card">
-                <a href="#" class="video-thumb" data-vimeo-id="388941315">
-                    <img src="https://i.vimeocdn.com/video/852422588-1a9f40b6f3698ca05480864c961262b4ddd1e76c1157fef6111c4a8372621717-d_640x360?r=pad" alt="Michael Nunez testimonial">
+                <a href="#" class="video-thumb no-lazy" data-vimeo-id="388941315">
+                    <img src="https://i.vimeocdn.com/video/852422588-1a9f40b6f3698ca05480864c961262b4ddd1e76c1157fef6111c4a8372621717-d_640x360?r=pad" alt="Michael Nunez testimonial" loading="eager" data-no-lazy="1" data-skip-lazy="1" class="no-lazyload">
                     <div class="play-btn"></div>
                 </a>
                 <div class="vid-name">Michael Nunez</div>
                 <div class="vid-location">Brooklyn, NY</div>
             </div>
             <div class="video-card">
-                <a href="#" class="video-thumb" data-vimeo-id="388940592">
-                    <img src="https://i.vimeocdn.com/video/852421561-ba3f0ace325fbb649107fb6fda61abb7a971a25395d2596df8ad25a94ab3c485-d_640x360?r=pad" alt="Nick Oliver testimonial">
+                <a href="#" class="video-thumb no-lazy" data-vimeo-id="388940592">
+                    <img src="https://i.vimeocdn.com/video/852421561-ba3f0ace325fbb649107fb6fda61abb7a971a25395d2596df8ad25a94ab3c485-d_640x360?r=pad" alt="Nick Oliver testimonial" loading="eager" data-no-lazy="1" data-skip-lazy="1" class="no-lazyload">
                     <div class="play-btn"></div>
                 </a>
                 <div class="vid-name">Nick Oliver</div>
                 <div class="vid-location">Tasmania, Australia</div>
             </div>
             <div class="video-card">
-                <a href="#" class="video-thumb" data-vimeo-id="388946478">
-                    <img src="https://i.vimeocdn.com/video/852430008-516bc93e33c37c657a0859d7a24c2d6c8306c75dc5793f94795bb9dfc3b38296-d_640x360?r=pad" alt="Rupi Sian testimonial">
+                <a href="#" class="video-thumb no-lazy" data-vimeo-id="388946478">
+                    <img src="https://i.vimeocdn.com/video/852430008-516bc93e33c37c657a0859d7a24c2d6c8306c75dc5793f94795bb9dfc3b38296-d_640x360?r=pad" alt="Rupi Sian testimonial" loading="eager" data-no-lazy="1" data-skip-lazy="1" class="no-lazyload">
                     <div class="play-btn"></div>
                 </a>
                 <div class="vid-name">Rupi Sian</div>
@@ -1261,6 +1264,18 @@
     });
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && lb.classList.contains('open')) closeVid();
+    });
+    // Remove any inline iframes that a lazy-load plugin may inject into our thumbnails.
+    function stripInjectedFrames() {
+        document.querySelectorAll('.video-thumb iframe, .video-thumb .perfmatters-lazy-youtube').forEach(function(el) {
+            el.remove();
+        });
+    }
+    stripInjectedFrames();
+    // Also watch for late-injected frames (plugins sometimes add them after DOMContentLoaded)
+    var mo = new MutationObserver(stripInjectedFrames);
+    document.querySelectorAll('.video-thumb').forEach(function(thumb) {
+        mo.observe(thumb, { childList: true, subtree: true });
     });
 })();
 </script>
