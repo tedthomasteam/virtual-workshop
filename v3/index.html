@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Virtual Training - Tax Defaulted Property Investing | Ted Thomas</title>
+    <meta name="description" content="What if you could earn real estate cash flow without being a landlord? Join Ted Thomas's 5-hour virtual training this Saturday at 11 AM Eastern for just $7."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Open Sans', Arial, sans-serif; color: #333; line-height: 1.6; padding-top: 80px; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+        h1, h2, h3 { font-family: 'Oswald', Arial, sans-serif; line-height: 1.3; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+        .container-wide { max-width: 1380px; margin: 0 auto; padding: 0 30px; }
+        .text-center { text-align: center; }
+
+        /* CTA Button */
+        .btn {
+            display: inline-block;
+            padding: 22px 50px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            background-color: #E9CE38;
+            color: #000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            line-height: 1.3;
+        }
+        .btn:hover {
+            background-color: #FFF400;
+            box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+
+        /* ===== 1. HEADER BAR ===== */
+        .header-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: #104E97;
+            background-image: url('https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2023/12/Section-Two-BG-1.jpg?strip=all');
+            background-size: cover;
+            padding: 12px 30px;
+        }
+        .header-inner {
+            max-width: 1380px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .header-logo img { height: 50px; width: auto; }
+        .header-text {
+            color: #E9CE38;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            flex: 1;
+        }
+        .header-cta .btn {
+            font-size: 14px;
+            padding: 10px 20px;
+            white-space: nowrap;
+        }
+
+        /* ===== 2. HERO ===== */
+        .hero {
+            background: #fff;
+            padding: 60px 0 50px;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 38px;
+            color: #104E97;
+            margin-bottom: 30px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            text-wrap: balance;
+        }
+        .hero h2.black {
+            color: #000;
+            font-size: 36px;
+        }
+        .highlight-box {
+            background-color: #DCFF0B;
+            padding: 30px 40px;
+            margin: 30px auto;
+            max-width: 1200px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-radius: 5px;
+        }
+        .highlight-box p {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.5;
+            color: #000;
+            text-wrap: balance;
+        }
+        .hero .subtitle {
+            font-size: 22px;
+            color: #333;
+            max-width: 1100px;
+            margin: 30px auto 0;
+            line-height: 1.5;
+            text-wrap: balance;
+        }
+        .hero .sub-note {
+            font-size: 16px;
+            color: #888;
+            margin-top: 20px;
+        }
+
+        /* ===== 3. WHO THIS IS FOR ===== */
+        .who-for {
+            background: #F9F9F9;
+            padding: 45px 0;
+        }
+        .who-for h2 {
+            font-size: 38px;
+            color: #104E97;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .who-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            max-width: 900px;
+            margin: 0 auto 30px;
+        }
+        .who-item {
+            font-size: 20px;
+            padding: 0 0 0 35px;
+            position: relative;
+            line-height: 1.5;
+            text-wrap: balance;
+        }
+        .who-item::before {
+            content: "\2713";
+            color: #E9CE38;
+            font-size: 22px;
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .who-for .note {
+            text-align: center;
+            font-size: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-wrap: balance;
+        }
+
+        /* ===== 4. STUDENT RESULTS ===== */
+        .students {
+            background: #fff;
+            padding: 45px 0;
+            text-align: center;
+        }
+        .students h2 {
+            font-size: 38px;
+            color: #104E97;
+            margin-bottom: 10px;
+        }
+        .gold-divider {
+            width: 150px;
+            height: 5px;
+            background: #E9CE38;
+            margin: 15px auto 20px;
+        }
+        .students .intro-text {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .students-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .student-card {
+            text-align: center;
+            width: 200px;
+        }
+        .student-card img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid #E9CE38;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            object-fit: cover;
+            margin: 0 auto 15px;
+        }
+        .student-card .name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            color: #104E97;
+            margin-bottom: 5px;
+        }
+        .student-card .amount {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 8px;
+        }
+        .student-card .story {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.4;
+        }
+        .disclaimer {
+            font-size: 16px;
+            color: #555;
+            max-width: 800px;
+            margin: 20px auto 0;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* ===== 5. WHAT THIS IS NOT ===== */
+        .what-not {
+            background-image: url('https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2023/12/Section-Three-BG-1.jpg?strip=all');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 0 140px;
+        }
+        .what-not h2 {
+            font-size: 38px;
+            color: #104E97;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .what-not ul {
+            list-style: none;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .what-not ul li {
+            font-size: 22px;
+            padding: 8px 0 8px 30px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+        .what-not ul li::before {
+            content: "\2022";
+            color: #E9CE38;
+            font-size: 28px;
+            position: absolute;
+            left: 0;
+            top: 4px;
+        }
+
+        /* ===== 6. IKEA / TWO TYPES WHITE CARD ===== */
+        .two-types {
+            background: #fff;
+            max-width: 1100px;
+            margin: -70px auto 0;
+            padding: 55px 60px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+            border-radius: 5px;
+            position: relative;
+            z-index: 10;
+        }
+        .two-types h2 {
+            font-size: 36px;
+            color: #104E97;
+            margin-bottom: 20px;
+        }
+        .two-types h2.black {
+            color: #000;
+        }
+        .two-types p {
+            font-size: 22px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .ikea-content img {
+            float: left;
+            width: 220px;
+            margin: 5px 25px 10px 0;
+            border-radius: 8px;
+        }
+        .ikea-content::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .ikea-content p {
+            font-size: 20px;
+        }
+        .two-types .greedy-section {
+            margin-top: 30px;
+        }
+
+        /* ===== 7. ABOUT TED ===== */
+        .who-ted {
+            background: #fff;
+            padding: 45px 0;
+        }
+        .who-ted-box {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 45px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .who-ted-box .ted-photo {
+            float: right;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 0 20px 30px;
+        }
+        .who-ted-box h2 {
+            font-size: 36px;
+            color: #104E97;
+            margin-bottom: 10px;
+        }
+        .who-ted-box h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        .who-ted-box .bio {
+            text-align: left;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+        .who-ted-box .bio p { margin-bottom: 18px; }
+        .who-ted-box .bio::after { content: ""; display: table; clear: both; }
+        .lifestyle-images {
+            display: flex;
+            gap: 15px;
+            margin: 30px 0 10px;
+        }
+        .lifestyle-images img {
+            flex: 1;
+            border-radius: 8px;
+            object-fit: cover;
+            max-height: 200px;
+        }
+
+        /* ===== 8. PRICING BOX ===== */
+        .pricing-section {
+            background-image: url('https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2026/03/100-dollar-bills.jpeg?strip=all');
+            background-size: cover;
+            background-position: center;
+            padding: 45px 0;
+        }
+        .pricing-box {
+            background: #fff;
+            border: 7px dashed #000;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 38px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .pricing-box h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-size: 42px;
+            color: #FF4747;
+            margin-bottom: 10px;
+        }
+        .pricing-box h3 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-size: 36px;
+            color: #1F2C48;
+            margin-bottom: 25px;
+        }
+        .price-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+        .price-display .for-only {
+            font-size: 28px;
+            color: #333;
+        }
+        .price-display .price-new {
+            font-size: 100px;
+            font-weight: 900;
+            font-family: 'Roboto', sans-serif;
+            color: #000;
+            background: #FFFDD1;
+            padding: 5px 20px;
+            line-height: 1;
+        }
+        .price-display .price-old {
+            font-size: 60px;
+            font-weight: 700;
+            font-family: 'Roboto', sans-serif;
+            color: #999;
+            text-decoration: line-through;
+        }
+        .pricing-box .desc {
+            font-size: 22px;
+            margin: 20px 0;
+            line-height: 1.4;
+        }
+        .pricing-box .included-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 30px 0 20px;
+        }
+        .pricing-box .evergreen-note {
+            font-size: 18px;
+            font-style: italic;
+            color: #555;
+            margin-top: 20px;
+        }
+        .checklist {
+            list-style: none;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .checklist li {
+            font-family: 'Roboto', sans-serif;
+            font-size: 22px;
+            padding: 10px 0 10px 35px;
+            position: relative;
+            line-height: 1.3;
+        }
+        .checklist li::before {
+            content: "\2713";
+            color: #0F9C2C;
+            font-size: 22px;
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+
+        /* ===== 9. WHAT YOU'LL WALK AWAY KNOWING ===== */
+        .walkaway {
+            background: #F9F9F9;
+            padding: 45px 0;
+        }
+        .walkaway h2 {
+            font-size: 38px;
+            color: #104E97;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .walkaway .intro {
+            font-size: 22px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 40px;
+        }
+        .walkaway-list {
+            list-style: none;
+            max-width: 900px;
+            margin: 0 auto 30px;
+        }
+        .walkaway-list li {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 18px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .walkaway-list li::before {
+            content: counter(walkaway-counter);
+            counter-increment: walkaway-counter;
+            color: #104E97;
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .walkaway-list {
+            counter-reset: walkaway-counter;
+        }
+        .walkaway .bottom-note {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ===== 10. SCHEDULE TABLE ===== */
+        .schedule {
+            background: #fff;
+            padding: 45px 0;
+        }
+        .schedule h2 {
+            font-size: 38px;
+            color: #104E97;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .schedule table {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .schedule thead th {
+            background: #104E97;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: left;
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+        }
+        .schedule tbody tr:nth-child(odd) { background: #EAEAEA; }
+        .schedule tbody tr:nth-child(even) { background: #FFFFFF; }
+        .schedule tbody td {
+            padding: 18px 20px;
+            vertical-align: top;
+        }
+        .schedule tbody td:first-child {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #104E97;
+            text-align: center;
+            width: 21%;
+            white-space: nowrap;
+        }
+        .schedule tbody td:last-child {
+            font-size: 18px;
+            line-height: 1.3;
+        }
+        .schedule .schedule-note {
+            text-align: center;
+            font-size: 15px;
+            color: #666;
+            font-style: italic;
+            margin-top: 15px;
+        }
+
+        /* ===== 10b. VIDEO TESTIMONIALS ===== */
+        .video-testimonials {
+            background: #fff;
+            padding: 45px 0;
+            text-align: center;
+        }
+        .video-testimonials h2 {
+            font-size: 38px;
+            color: #104E97;
+            margin-bottom: 30px;
+        }
+        .video-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .video-card {
+            width: 280px;
+            text-align: center;
+        }
+        .video-card .video-thumb {
+            position: relative;
+            cursor: pointer;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+        .video-card .video-thumb img {
+            width: 100%;
+            display: block;
+        }
+        .video-card .video-thumb .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(16, 78, 151, 0.85);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .video-card .video-thumb .play-btn::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 0 10px 18px;
+            border-color: transparent transparent transparent #fff;
+            margin-left: 3px;
+        }
+        .video-card .vid-name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            color: #104E97;
+            margin-bottom: 3px;
+        }
+        .video-card .vid-location {
+            font-size: 14px;
+            color: #666;
+        }
+        /* Prevent lazy-load plugins from injecting inline Vimeo iframes inside our thumbnails */
+        .video-thumb iframe { display: none !important; }
+        .video-thumb .perfmatters-lazy-youtube { display: none !important; }
+
+        /* Video Lightbox */
+        .video-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        .video-lightbox.open { display: flex; }
+        .video-lightbox-inner {
+            position: relative;
+            width: 100%;
+            max-width: 960px;
+            aspect-ratio: 16 / 9;
+        }
+        .video-lightbox-frame-wrap {
+            width: 100%;
+            height: 100%;
+        }
+        .video-lightbox iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            display: block;
+        }
+        .video-lightbox-close {
+            position: absolute;
+            top: -45px;
+            right: 0;
+            background: transparent;
+            border: 0;
+            color: #fff;
+            font-size: 36px;
+            line-height: 1;
+            cursor: pointer;
+            padding: 5px 12px;
+            font-family: 'Open Sans', sans-serif;
+            transition: color 0.2s;
+        }
+        .video-lightbox-close:hover { color: #E9CE38; }
+
+        /* ===== 11. WHAT COMES AFTER ===== */
+        .after-training {
+            background: #fff;
+            padding: 45px 0;
+        }
+        .after-training h2 {
+            font-size: 38px;
+            color: #104E97;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .after-training p {
+            font-size: 22px;
+            line-height: 1.5;
+            max-width: 900px;
+            margin: 0 auto 20px;
+        }
+
+        /* ===== 12. BOTTOM LINE CHECKLIST ===== */
+        .bottom-line {
+            background-image: url('https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2023/12/Section-Two-BG-1.jpg?strip=all');
+            background-size: cover;
+            padding: 45px 0;
+            color: #fff;
+            text-align: center;
+        }
+        .bottom-line h2 {
+            color: #E9CE38;
+            font-size: 38px;
+            margin-bottom: 30px;
+        }
+        .bottom-checklist {
+            list-style: none;
+            text-align: left;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .bottom-checklist li {
+            font-size: 20px;
+            padding: 10px 0 10px 35px;
+            position: relative;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .bottom-checklist li::before {
+            content: "\2713";
+            color: #E9CE38;
+            font-size: 22px;
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+
+        /* ===== 13. GUARANTEE ===== */
+        .guarantee-section {
+            background: #F2F2F2;
+            padding: 45px 0;
+        }
+        .guarantee-card {
+            background: #fff;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 38px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        .guarantee-card .seal { flex: 0 0 200px; }
+        .guarantee-card .seal img { width: 200px; height: 200px; }
+        .guarantee-card .guar-text { flex: 1; }
+        .guarantee-card h2 {
+            font-size: 32px;
+            color: #104E97;
+            margin-bottom: 15px;
+        }
+        .guarantee-card p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* ===== 14. FAQ ===== */
+        .faq-section {
+            background: #fff;
+            padding: 45px 0;
+        }
+        .faq-section h2 {
+            font-size: 38px;
+            color: #104E97;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #F9F9F9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .faq-item .faq-q {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #104E97;
+            margin-bottom: 10px;
+        }
+        .faq-item .faq-a {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        /* ===== 15. FINAL CTA ===== */
+        .final-cta {
+            background: #F2F2F2;
+            padding: 45px 0;
+            text-align: center;
+        }
+        .final-cta h1 {
+            font-size: 42px;
+            color: #104E97;
+            margin-bottom: 15px;
+        }
+        .final-cta .date-text {
+            font-size: 28px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .final-cta .info-text {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .final-cta .price-text {
+            font-size: 22px;
+            margin: 10px 0;
+        }
+        .final-cta .price-text del { color: #999; }
+        .final-cta .small-text {
+            font-size: 16px;
+            color: #666;
+            margin-top: 15px;
+        }
+
+        /* ===== 16. FOOTER ===== */
+        .site-footer {
+            background: #000;
+            padding: 45px 30px;
+            color: #fff;
+            text-align: center;
+        }
+        .site-footer .footer-disclaimer {
+            font-size: 20px;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+            color: #ccc;
+            text-wrap: balance;
+        }
+        .site-footer .footer-logo {
+            margin: 0 auto 25px;
+            max-width: 200px;
+        }
+        .site-footer .social-links {
+            margin-bottom: 20px;
+        }
+        .site-footer .social-links a {
+            color: #aaa;
+            margin: 0 10px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        .site-footer .social-links a:hover { color: #E9CE38; }
+        .site-footer .copyright {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 10px;
+        }
+        .site-footer .footer-links {
+            font-size: 13px;
+        }
+        .site-footer .footer-links a {
+            color: #aaa;
+            margin: 0 8px;
+        }
+        .site-footer .footer-links a:hover { color: #E9CE38; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            body { padding-top: 60px; }
+            .header-bar { padding: 8px 15px; }
+            .header-inner { flex-wrap: wrap; justify-content: center; gap: 8px; }
+            .header-logo img { height: 35px; }
+            .header-text { font-size: 12px; order: 3; flex-basis: 100%; }
+            .header-cta .btn { font-size: 12px; padding: 8px 15px; }
+
+            .hero h2 { font-size: 26px; }
+            .hero h2.black { font-size: 24px; }
+            .highlight-box { padding: 20px; }
+            .highlight-box p { font-size: 16px; }
+            .hero .subtitle { font-size: 18px; }
+
+            .who-grid { grid-template-columns: 1fr; }
+            .who-item { font-size: 18px; }
+            .who-for h2 { font-size: 28px; }
+
+            .students h2 { font-size: 28px; }
+            .students-grid { gap: 20px; }
+            .student-card { width: 160px; }
+            .student-card .name { font-size: 18px; }
+            .student-card .amount { font-size: 22px; }
+            .student-card .story { font-size: 13px; }
+
+            .what-not h2 { font-size: 26px; }
+            .what-not ul li { font-size: 18px; }
+
+            .two-types { padding: 30px 25px; margin-top: -40px; }
+            .two-types h2 { font-size: 26px; }
+            .two-types p { font-size: 18px; }
+            .ikea-content img { float: none; width: 200px; display: block; margin: 0 auto 15px; }
+
+            .who-ted-box { padding: 30px 20px; }
+            .who-ted-box .ted-photo { width: 200px; height: 200px; }
+            .who-ted-box .ted-photo { float: none; display: block; margin: 0 auto 20px; }
+            .who-ted-box .bio { font-size: 17px; }
+            .lifestyle-images { flex-direction: column; gap: 10px; }
+            .lifestyle-images img { max-height: none; }
+
+            .video-grid { gap: 20px; }
+            .video-card { width: 100%; max-width: 320px; }
+
+            .pricing-box { padding: 25px 15px; }
+            .pricing-box h1 { font-size: 28px; }
+            .pricing-box h3 { font-size: 24px; }
+            .price-display .price-new { font-size: 70px; }
+            .price-display .price-old { font-size: 40px; }
+            .pricing-box .desc { font-size: 18px; }
+            .checklist li { font-size: 18px; }
+
+            .walkaway h2 { font-size: 28px; }
+            .walkaway .intro { font-size: 18px; }
+            .walkaway-list li { font-size: 18px; }
+
+            .schedule h2 { font-size: 28px; }
+            .schedule tbody td:first-child { font-size: 1rem; white-space: normal; }
+            .schedule tbody td:last-child { font-size: 16px; }
+
+            .after-training h2 { font-size: 28px; }
+            .after-training p { font-size: 18px; }
+
+            .bottom-line h2 { font-size: 28px; }
+            .bottom-checklist li { font-size: 17px; }
+
+            .guarantee-card { flex-direction: column; text-align: center; padding: 30px 20px; }
+            .guarantee-card .seal { flex: none; }
+
+            .faq-section h2 { font-size: 28px; }
+            .faq-item { padding: 20px; }
+            .faq-item .faq-q { font-size: 18px; }
+            .faq-item .faq-a { font-size: 16px; }
+
+            .final-cta h1 { font-size: 30px; }
+
+            .btn { font-size: 20px; padding: 18px 30px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== 1. HEADER BAR ===== -->
+<header class="header-bar">
+    <div class="header-inner">
+        <div class="header-logo">
+            <a href="https://tedthomas.com">
+                <img src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2025/04/Ted-Thomas-Header-Logo-NEW.png?strip=all" alt="Ted Thomas Logo">
+            </a>
+        </div>
+        <div class="header-text">
+            5-Hour Foundational Training | This Saturday, [DATE] at 11 AM Eastern
+        </div>
+        <div class="header-cta">
+            <a href="https://tedthomas.com/cfgsk-order-vw/" class="btn">Join This Saturday for $7</a>
+        </div>
+    </div>
+</header>
+
+<!-- ===== 2. HERO ===== -->
+<section class="hero">
+    <div class="container">
+        <h2>What if you could earn real estate cash flow without being a landlord?</h2>
+        <div class="highlight-box">
+            <p>Traditional real estate offers monthly cash flow, but it also comes with tenants, termites, and trash. Tax defaulted property investing lets you earn cash flow in lump sums, without owning rental property, qualifying for mortgages, or fixing a single toilet.</p>
+        </div>
+        <h2 class="black" style="margin-top: 30px;">Why collect monthly checks when you could earn it all at once?</h2>
+        <p class="subtitle">For over 30 years, Ted Thomas has been teaching everyday people how to earn real estate cash flow through U.S. government-backed programs that are mandated by state law. This Saturday, he'll show you how.</p>
+        <div style="margin-top: 30px;">
+            <a href="https://tedthomas.com/cfgsk-order-vw/" class="btn">Join This Saturday's Training for Just $7</a>
+        </div>
+        <p class="sub-note">This coming Saturday at 11 AM Eastern. 5 hours of foundational training.</p>
+    </div>
+</section>
+
+<!-- ===== 3. WHO THIS IS FOR ===== -->
+<section class="who-for">
+    <div class="container">
+        <h2>Who this training is for</h2>
+        <div class="who-grid">
+            <div class="who-item">You're curious about real estate investing but not sure where to start</div>
+            <div class="who-item">You're tired of earning 1-2% on your savings while inflation eats it away</div>
+            <div class="who-item">You want investment income without being a landlord, fixing toilets, or dealing with tenants</div>
+            <div class="who-item">You've heard about tax liens or tax deeds and want to understand how they actually work</div>
+        </div>
+        <p class="note">No experience needed. No U.S. residency required. Over 20% of Ted's students live in Canada.<!-- TODO: team to verify this percentage against actual student data --></p>
+    </div>
+</section>
+
+<!-- ===== 4. STUDENT RESULTS ===== -->
+<section class="students">
+    <div class="container">
+        <h2>Real results from real students</h2>
+        <div class="gold-divider"></div>
+        <p class="intro-text">These are people who learned tax defaulted property investing through Ted's training and put it into action:</p>
+        <div class="students-grid">
+            <div class="student-card">
+                <img src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2023/12/Samantha-Cazabon-1-150x146.jpg?strip=all" alt="Samantha Cazabon">
+                <div class="name">Samantha Cazabon</div>
+                <div class="amount">$18,100</div>
+                <div class="story">A new mom wanting to work from home, Samantha started with no knowledge of tax liens. After taking Ted's training, she tripled her investment on her very first tax deed deal.</div>
+            </div>
+            <div class="student-card">
+                <img src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2023/12/Chris-Johnson-1-150x148.jpg?strip=all" alt="Chris Johnson">
+                <div class="name">Chris Johnson</div>
+                <div class="amount">$9,868</div>
+                <div class="story">A Canadian investor, Chris turned a small U.S. tax lien certificate investment into a substantial profit in just two months.</div>
+            </div>
+            <div class="student-card">
+                <img src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2023/12/Anna-Velez-1-150x150.jpg?strip=all" alt="Anna Velez">
+                <div class="name">Anna Velez</div>
+                <div class="amount">$29,074</div>
+                <div class="story">Although Anna already had extensive real estate experience, she switched to tax deeds because they offered a highly efficient way to buy low, sell quickly, and double her money.</div>
+            </div>
+            <div class="student-card">
+                <img src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2023/12/John-Hines-1-150x145.jpg?strip=all" alt="John Hines">
+                <div class="name">John Hines</div>
+                <div class="amount">$8,127</div>
+                <div class="story">A home-based entrepreneur, John bought his first tax lien certificate part-time while running his business from home.</div>
+            </div>
+            <div class="student-card">
+                <img src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2023/12/Joe-Richards-1-150x150.jpg?strip=all" alt="Joe Rickards">
+                <div class="name">Joe Rickards</div>
+                <div class="amount">$39,899</div>
+                <div class="story">A retired professional, Joe was looking for better returns on his savings. He's been doing tax deed investing for several years now.</div>
+            </div>
+        </div>
+        <p class="disclaimer">Results shown are not typical. Individual outcomes vary based on effort, market conditions, and other factors. Past performance does not guarantee future results.</p>
+    </div>
+</section>
+
+<!-- ===== 4b. PRICING BOX (moved up from further down the page) ===== -->
+<section class="pricing-section">
+    <div class="pricing-box">
+        <h1>Join this Saturday's training</h1>
+        <h3>+ The Cash Flow Generator Starter Kit</h3>
+        <div class="price-display">
+            <span class="for-only">for just</span>
+            <span class="price-new">$7</span>
+            <span class="price-old">$47</span>
+        </div>
+        <p class="desc">A beginner's toolkit for discovering how government-backed tax certificates and tax deeds can generate real estate income without being a landlord.</p>
+        <p class="included-title">Here's what's included:</p>
+        <ul class="checklist">
+            <li><strong>#1:</strong> Tax Defaulted Property Auction State Guide ($99 value)</li>
+            <li><strong>#2:</strong> Monthly Calendar of Best Auctions ($49 value)</li>
+            <li><strong>#3:</strong> Tax Defaulted Property Auction Inventory, Updated Weekly ($99 value)</li>
+            <li><strong>Saturday Virtual Training:</strong> 5 hours of training with Ted Thomas and successful investors ($47 value)</li>
+        </ul>
+        <div style="margin-top: 30px;">
+            <a href="https://tedthomas.com/cfgsk-order-vw/" class="btn">Join This Saturday's Training for Just $7</a>
+        </div>
+        <p class="evergreen-note">This Saturday, [DATE] at 11 AM Eastern. You'll need a computer with internet and Zoom to attend.</p>
+    </div>
+</section>
+
+<!-- ===== 5. WHAT THIS IS NOT ===== -->
+<section class="what-not">
+    <div class="container">
+        <h2>Before we go further. Here's what this is not</h2>
+        <ul>
+            <li>Nothing-down deals</li>
+            <li>Buying, holding, or long-term rentals</li>
+            <li>Fixing up properties and flipping them</li>
+            <li>Buying property and getting stuck with it</li>
+            <li>Dealing with tenants</li>
+            <li>No plumbers, electricians, or inspectors</li>
+            <li>No mortgages to qualify for</li>
+            <li>No concerns about your credit score</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ===== 6. IKEA TEST / TWO TYPES ===== -->
+<div class="container">
+    <div class="two-types">
+        <h2 class="black">Honest talk: this isn't for everyone</h2>
+        <p>There are two types of people who won't succeed with this, and I'd rather save your time upfront.</p>
+
+        <h2>The IKEA test</h2>
+        <p>You know the IKEA cabinet that comes in a box with bags of screws, a metal screwdriver, and illustrated instructions? Ask yourself honestly: are you the type who tosses the instructions and jumps right in? Or do you follow the steps?</p>
+
+        <div class="ikea-content">
+            <img src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2025/04/couple-ikea-frustration.jpg?strip=all" alt="Couple frustrated with IKEA furniture">
+            <p>Tax defaulted property investing requires following a process: searching for specific criteria online, evaluating properties systematically, and executing deals step by step. If you can follow instructions, you can do this. If you're the type who assumes you already know everything, this won't work for you.</p>
+            <p>Just like IKEA, you don't need to follow instructions, but 8 out of 10 cabinets you put together will fall apart. This business is the same. Without what I teach, you might make one deal out of 5 work, but the losses of the other four deals will kill you.</p>
+            <p>If you're still reading, good. You have the right temperament for this.</p>
+        </div>
+
+        <div class="greedy-section">
+            <h2>The greed test</h2>
+            <p>I teach students to make a quick, good, safe, but modest, profit. Here's what that looks like:</p>
+            <p>You might pick up a property for $7,000. It has no mortgage. The market value might be $110,000. I teach my students to resell it quickly for around $47,000, well below retail, but still a $30,000+ profit after expenses. You do this 4-5 times a year, spending about 7-10 hours a week.</p>
+            <p>The key insight: my students let the next buyer take the risk of finding a retail purchaser, dealing with mortgages, and managing tenants. My students buy low and sell low. Quick in, quick out, predictable profits.</p>
+            <p>If you're looking to get rich on a single deal, this isn't for you. If you're looking for a repeatable system that generates real cash flow, keep reading.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ===== 7. ABOUT TED ===== -->
+<section class="who-ted" style="margin-top: 60px;">
+    <div class="who-ted-box">
+        <h2>Who is Ted Thomas?</h2>
+        <h3>America's leading authority on tax defaulted property investing for over 30 years</h3>
+        <div class="bio">
+            <img class="ted-photo" src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2025/04/wwr-ty-img-4.png?strip=all" alt="Ted Thomas">
+            <p>My name is Ted Thomas. I've been teaching tax lien certificate and tax deed investing since the early 1990s. I'm a published author, and I've maintained a 4.8 Google Rating, which is nearly unheard of in the investment education space.</p>
+            <p>After watching my parents work hard their whole lives and die almost broke, I decided to dedicate myself to finding an investment strategy that ordinary people could actually use. Tax defaulted property investing got me through multiple financial crises: recessions, inflation, market crashes. The 200-year-old government program behind it doesn't care what the stock market is doing.</p>
+            <p>I've been called America's foremost authority on tax defaulted property investing, and I've been doing this for over 30 years, longer than anyone else teaching in this space. I saw it go from mimeographed county handouts to online auctions. The technology changed, but the fundamentals of this 200-year-old program are the same.</p>
+            <p>The only pushback I've ever gotten was from the big investment community (mutual fund companies and the like) who didn't like me showing everyday people that these returns were possible.</p>
+            <p>This is a home-based business you can run from anywhere. Over 20% of my students live and work in Canada. You can do this from your kitchen table, a coffee shop, or a beach.</p>
+            <div class="lifestyle-images">
+                <img src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2020/08/canada-waving-flag.jpg?strip=all" alt="Canadian flag">
+                <img src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2020/08/woman-laptop-beach.jpg?strip=all" alt="Woman working on laptop at beach">
+                <img src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2020/08/couple-laptop-coffee-shop.jpg?strip=all" alt="Couple working at coffee shop">
+            </div>
+            <p><strong>Ted Thomas</strong></p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== 9. WHAT YOU'LL WALK AWAY KNOWING ===== -->
+<section class="walkaway">
+    <div class="container">
+        <h2>What you'll walk away knowing after 5 hours</h2>
+        <p class="intro">This isn't a vague motivational talk. By the end of Saturday, you will understand:</p>
+        <ul class="walkaway-list">
+            <li><strong>How tax lien certificates work</strong>: and why local governments pay investors 16%, 18%, even 25% interest, backed by real property</li>
+            <li><strong>How tax deed auctions work</strong>: and how investors buy homes in good neighborhoods for 30 to 60 cents on the dollar, mortgage-free</li>
+            <li><strong>Where to find auctions in your state</strong>: the specific counties and online platforms where deals are happening right now</li>
+            <li><strong>The buy-low, sell-low strategy</strong>: why Ted's students don't hold property or deal with tenants, and how they turn quick profits instead</li>
+            <li><strong>What to avoid</strong>: the states, counties, and deal types that trip up beginners (this alone is worth the $7)</li>
+            <li><strong>Real investor stories</strong>: you'll hear directly from three of Ted's students who started exactly where you are now</li>
+        </ul>
+        <p class="bottom-note">If you learn one thing you didn't know about tax deed investing, it was worth the $7. If you don't, you lost less than a cup of coffee.</p>
+    </div>
+</section>
+
+<!-- ===== 10. SCHEDULE TABLE ===== -->
+<section class="schedule">
+    <div class="container">
+        <h2>Saturday training schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time (ET)</th>
+                    <th>What you'll learn</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>11:00 AM &ndash; 12:00 PM</td>
+                    <td>Ted Thomas: Welcome, introduction, how tax lien certificates work, and why they matter in today's economy. Overview of resources for students.</td>
+                </tr>
+                <tr>
+                    <td>12:00 PM &ndash; 1:00 PM</td>
+                    <td>Bill Williams: Retired aerospace engineer and longtime tax defaulted property investor. Step-by-step walkthrough of buying tax lien certificates online. Special report on current opportunities in Florida.</td>
+                </tr>
+                <tr>
+                    <td>1:00 PM &ndash; 2:00 PM</td>
+                    <td>Ted Thomas: The 5 best states and counties for tax lien certificates and tax deeds right now. Where to find the latest auction opportunities.</td>
+                </tr>
+                <tr>
+                    <td>2:00 PM &ndash; 2:30 PM</td>
+                    <td>Bob Schumacher: Full-time forester and successful tax deed investor. How he made money buying tax defaulted property during both recessions and inflationary periods.</td>
+                </tr>
+                <tr>
+                    <td>2:30 PM &ndash; 3:30 PM</td>
+                    <td>Paul Castillo: Single father of two and part-time tax deed investor. How he's earned $100,000+ five years running while working 7-10 hours a week.</td>
+                </tr>
+                <tr>
+                    <td>3:30 PM &ndash; 4:00 PM</td>
+                    <td>Ted Thomas: New resources for students and next steps.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="schedule-note">Speakers and schedule subject to change.</p>
+    </div>
+</section>
+
+<!-- ===== 10b. VIDEO TESTIMONIALS ===== -->
+<section class="video-testimonials">
+    <div class="container">
+        <h2>Hear from people who've attended Ted's events</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <a href="#" class="video-thumb no-lazy" data-vimeo-id="388941315">
+                    <img src="https://i.vimeocdn.com/video/852422588-1a9f40b6f3698ca05480864c961262b4ddd1e76c1157fef6111c4a8372621717-d_640x360?r=pad" alt="Michael Nunez testimonial" loading="eager" data-no-lazy="1" data-skip-lazy="1" class="no-lazyload">
+                    <div class="play-btn"></div>
+                </a>
+                <div class="vid-name">Michael Nunez</div>
+                <div class="vid-location">Brooklyn, NY</div>
+            </div>
+            <div class="video-card">
+                <a href="#" class="video-thumb no-lazy" data-vimeo-id="388940592">
+                    <img src="https://i.vimeocdn.com/video/852421561-ba3f0ace325fbb649107fb6fda61abb7a971a25395d2596df8ad25a94ab3c485-d_640x360?r=pad" alt="Nick Oliver testimonial" loading="eager" data-no-lazy="1" data-skip-lazy="1" class="no-lazyload">
+                    <div class="play-btn"></div>
+                </a>
+                <div class="vid-name">Nick Oliver</div>
+                <div class="vid-location">Tasmania, Australia</div>
+            </div>
+            <div class="video-card">
+                <a href="#" class="video-thumb no-lazy" data-vimeo-id="388946478">
+                    <img src="https://i.vimeocdn.com/video/852430008-516bc93e33c37c657a0859d7a24c2d6c8306c75dc5793f94795bb9dfc3b38296-d_640x360?r=pad" alt="Rupi Sian testimonial" loading="eager" data-no-lazy="1" data-skip-lazy="1" class="no-lazyload">
+                    <div class="play-btn"></div>
+                </a>
+                <div class="vid-name">Rupi Sian</div>
+                <div class="vid-location">Ontario, Canada</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Lightbox -->
+<div class="video-lightbox" id="videoLightbox">
+    <div class="video-lightbox-inner">
+        <button type="button" class="video-lightbox-close" aria-label="Close video">&times;</button>
+        <div class="video-lightbox-frame-wrap"></div>
+    </div>
+</div>
+
+<script>
+(function() {
+    var lb = document.getElementById('videoLightbox');
+    var wrap = lb.querySelector('.video-lightbox-frame-wrap');
+    function openVid(id) {
+        // Build a fresh iframe each time to avoid any leftover state.
+        wrap.innerHTML = '<iframe src="https://player.vimeo.com/video/' + encodeURIComponent(id) + '?autoplay=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeVid() {
+        // Fully remove the iframe so the video stops and nothing lingers.
+        wrap.innerHTML = '';
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.video-thumb[data-vimeo-id]').forEach(function(el) {
+        el.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            openVid(el.getAttribute('data-vimeo-id'));
+        });
+    });
+    lb.addEventListener('click', function(e) {
+        if (e.target === lb || e.target.classList.contains('video-lightbox-close')) {
+            closeVid();
+        }
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lb.classList.contains('open')) closeVid();
+    });
+    // Remove any inline iframes that a lazy-load plugin may inject into our thumbnails.
+    function stripInjectedFrames() {
+        document.querySelectorAll('.video-thumb iframe, .video-thumb .perfmatters-lazy-youtube').forEach(function(el) {
+            el.remove();
+        });
+    }
+    stripInjectedFrames();
+    // Also watch for late-injected frames (plugins sometimes add them after DOMContentLoaded)
+    var mo = new MutationObserver(stripInjectedFrames);
+    document.querySelectorAll('.video-thumb').forEach(function(thumb) {
+        mo.observe(thumb, { childList: true, subtree: true });
+    });
+})();
+</script>
+
+<!-- ===== 11. WHAT COMES AFTER ===== -->
+<section class="after-training">
+    <div class="container">
+        <h2>What comes after the training</h2>
+        <p>This training teaches the foundation of tax defaulted property investing. You'll leave with a clear understanding of whether this is right for you.</p>
+        <p>Students who want hands-on coaching and advanced strategies can explore our mentoring program after the training. No pressure, no hard sell. You'll have everything you need to decide on your own timeline.</p>
+    </div>
+</section>
+
+<!-- ===== 12. BOTTOM LINE CHECKLIST ===== -->
+<section class="bottom-line">
+    <div class="container">
+        <h2>Why this works</h2>
+        <ul class="bottom-checklist">
+            <li><strong>Works regardless of inflation or recession</strong>: Immune to the Fed, stock market swings, pandemics, and elections.</li>
+            <li><strong>Start small</strong>: You need less capital when you can invest at 16-25% returns instead of 1%.</li>
+            <li><strong>Government secured</strong>: Not FDIC-insured like bank CDs, but backed by local government agencies guaranteeing your returns. Rock-solid.</li>
+            <li><strong>Your credit score doesn't matter</strong>: This 200-year-old program is open to anyone. You don't need to be American. Past financial history is irrelevant.</li>
+            <li><strong>High, locked-in interest rates</strong>: Government-mandated returns of 16%, 18%, even 25%, paid directly to you in lump sums.</li>
+            <li><strong>Home and lifestyle based</strong>: Work from your kitchen table, a coffee shop, or a beach. You need a computer and internet access. That's it.</li>
+            <li><strong>No broker commissions</strong>: You invest directly. No middlemen, no management fees, no hidden charges.</li>
+            <li><strong>Inflation and recession-proof</strong>: Ted has been doing this since the 1970s oil embargo, through every economic cycle since. The program works in all conditions.</li>
+            <li><strong>No hidden costs</strong>: Unlike mutual funds with buy-in fees and management charges, what you invest is what you invest. Period.</li>
+            <li><strong>Teach your family</strong>: Once you've proven this works, you can make it a family business. There are more tax defaulted properties than investors. Only abundance, no competition.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ===== 13. GUARANTEE ===== -->
+<section class="guarantee-section">
+    <div class="container">
+        <div class="guarantee-card">
+            <div class="seal">
+                <img src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2023/12/Satisfaction-Guarantee-Seal-1.png?strip=all" alt="100% Satisfaction Guarantee Seal">
+            </div>
+            <div class="guar-text">
+                <h2>100% Satisfaction Guarantee</h2>
+                <p>Attend the entire training. If you don't feel you got real value, email info@tedthomas.com within 3 days and we'll refund your $7 immediately. No hassles, no hard feelings.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== 14. FAQ ===== -->
+<section class="faq-section">
+    <div class="container">
+        <h2>Common questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-q">Do I need any investing experience?</div>
+                <div class="faq-a">No. This training is designed for beginners. Ted starts with the fundamentals and builds from there.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Do I need to live in the United States?</div>
+                <div class="faq-a">No. Over 20% of Ted's students live and work in Canada. You can participate in U.S. tax lien and tax deed auctions from anywhere with an internet connection.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Is this just a sales pitch for an expensive program?</div>
+                <div class="faq-a">You'll learn real strategies and real information for 5 hours. Ted also offers coaching and mentoring programs for students who want to go deeper. He'll mention those during the training. But the training stands on its own. Most attendees tell us they'd have paid far more than $7 for what they learned.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What if I can't make this Saturday?</div>
+                <div class="faq-a">We run these trainings regularly. There will be another one soon, always on Saturday at 11 AM Eastern.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What do I need to attend?</div>
+                <div class="faq-a">A computer with internet access and Zoom installed. This isn't something to do on a phone. You'll want a full screen to follow along with the demonstrations.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== 15. FINAL CTA ===== -->
+<section class="final-cta">
+    <div class="container-wide">
+        <h1>Join us this Saturday</h1>
+        <p class="date-text">This Saturday, [DATE] at 11 AM Eastern. 5 hours of foundational training</p>
+        <p class="info-text">Reserve your spot before this Saturday.</p>
+        <a href="https://tedthomas.com/cfgsk-order-vw/" class="btn" style="margin: 20px 0;">Register Now for Just $7</a>
+        <p class="price-text"><del>$47</del> $7. 100% money-back guarantee</p>
+        <p class="small-text">For the price of a cup of coffee, find out if tax defaulted property investing is right for you.</p>
+    </div>
+</section>
+
+<!-- ===== 16. FOOTER (commented out - Elementor footer is used instead) =====
+<footer class="site-footer">
+    <div class="footer-disclaimer">
+        <p>Traditional real estate offers monthly cash flow but also comes with tenants, termites, and trash. Tax defaulted property investing offers an alternative path to real estate income without owning rental property.</p>
+    </div>
+    <div class="footer-logo">
+        <img src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2025/04/Ted-Thomas-Header-Logo-NEW.png?strip=all" alt="Ted Thomas Logo" style="max-width: 200px; margin: 0 auto;">
+    </div>
+    <div class="social-links">
+        <a href="https://www.facebook.com/tedthomasofficial" target="_blank">Facebook</a>
+        <a href="https://twitter.com/tedthomasinfo" target="_blank">Twitter</a>
+        <a href="https://www.instagram.com/tedthomasofficial/" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/company/ted-thomas/" target="_blank">LinkedIn</a>
+        <a href="https://www.pinterest.com/tedthomasofficial/" target="_blank">Pinterest</a>
+    </div>
+    <p class="copyright">Copyright (c) 2026. Jones and Trevor Marketing, Inc. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="https://tedthomas.com/terms-of-service/" target="_blank">Terms of Service</a> |
+        <a href="https://tedthomas.com/privacy-policy/" target="_blank">Privacy Policy</a> |
+        <a href="https://tedthomas.com/earnings-disclaimer/" target="_blank">Earnings Disclaimer</a>
+    </div>
+</footer>
+===== END FOOTER ===== -->
+
+</body>
+</html>
