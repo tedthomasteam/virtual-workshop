@@ -630,6 +630,47 @@
             color: #666;
         }
 
+        /* Video Lightbox */
+        .video-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        .video-lightbox.open { display: flex; }
+        .video-lightbox-inner {
+            position: relative;
+            width: 100%;
+            max-width: 960px;
+            aspect-ratio: 16 / 9;
+        }
+        .video-lightbox iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+        .video-lightbox-close {
+            position: absolute;
+            top: -45px;
+            right: 0;
+            background: transparent;
+            border: 0;
+            color: #fff;
+            font-size: 36px;
+            line-height: 1;
+            cursor: pointer;
+            padding: 5px 12px;
+            font-family: 'Open Sans', sans-serif;
+            transition: color 0.2s;
+        }
+        .video-lightbox-close:hover { color: #E9CE38; }
+
         /* ===== 11. WHAT COMES AFTER ===== */
         .after-workshop {
             background: #fff;
@@ -1150,7 +1191,7 @@
         <h2>Hear from people who've attended Ted's events</h2>
         <div class="video-grid">
             <div class="video-card">
-                <a href="https://player.vimeo.com/video/388941315/" target="_blank" class="video-thumb">
+                <a href="#" class="video-thumb" data-vimeo-id="388941315">
                     <img src="https://i.vimeocdn.com/video/852422588-1a9f40b6f3698ca05480864c961262b4ddd1e76c1157fef6111c4a8372621717-d_640x360?r=pad" alt="Michael Nunez testimonial">
                     <div class="play-btn"></div>
                 </a>
@@ -1158,7 +1199,7 @@
                 <div class="vid-location">Brooklyn, NY</div>
             </div>
             <div class="video-card">
-                <a href="https://player.vimeo.com/video/388940592/" target="_blank" class="video-thumb">
+                <a href="#" class="video-thumb" data-vimeo-id="388940592">
                     <img src="https://i.vimeocdn.com/video/852421561-ba3f0ace325fbb649107fb6fda61abb7a971a25395d2596df8ad25a94ab3c485-d_640x360?r=pad" alt="Nick Oliver testimonial">
                     <div class="play-btn"></div>
                 </a>
@@ -1166,7 +1207,7 @@
                 <div class="vid-location">Tasmania, Australia</div>
             </div>
             <div class="video-card">
-                <a href="https://player.vimeo.com/video/388946478/" target="_blank" class="video-thumb">
+                <a href="#" class="video-thumb" data-vimeo-id="388946478">
                     <img src="https://i.vimeocdn.com/video/852430008-516bc93e33c37c657a0859d7a24c2d6c8306c75dc5793f94795bb9dfc3b38296-d_640x360?r=pad" alt="Rupi Sian testimonial">
                     <div class="play-btn"></div>
                 </a>
@@ -1176,6 +1217,45 @@
         </div>
     </div>
 </section>
+
+<!-- Video Lightbox -->
+<div class="video-lightbox" id="videoLightbox">
+    <div class="video-lightbox-inner">
+        <button type="button" class="video-lightbox-close" aria-label="Close video">&times;</button>
+        <iframe src="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+(function() {
+    var lb = document.getElementById('videoLightbox');
+    var frame = lb.querySelector('iframe');
+    function openVid(id) {
+        frame.src = 'https://player.vimeo.com/video/' + id + '?autoplay=1';
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeVid() {
+        frame.src = '';
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.video-thumb[data-vimeo-id]').forEach(function(el) {
+        el.addEventListener('click', function(e) {
+            e.preventDefault();
+            openVid(el.getAttribute('data-vimeo-id'));
+        });
+    });
+    lb.addEventListener('click', function(e) {
+        if (e.target === lb || e.target.classList.contains('video-lightbox-close')) {
+            closeVid();
+        }
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lb.classList.contains('open')) closeVid();
+    });
+})();
+</script>
 
 <!-- ===== 11. WHAT COMES AFTER ===== -->
 <section class="after-workshop">
