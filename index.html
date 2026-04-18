@@ -648,12 +648,17 @@
             max-width: 960px;
             aspect-ratio: 16 / 9;
         }
+        .video-lightbox-frame-wrap {
+            width: 100%;
+            height: 100%;
+        }
         .video-lightbox iframe {
             width: 100%;
             height: 100%;
             border: 0;
             border-radius: 8px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            display: block;
         }
         .video-lightbox-close {
             position: absolute;
@@ -1222,27 +1227,30 @@
 <div class="video-lightbox" id="videoLightbox">
     <div class="video-lightbox-inner">
         <button type="button" class="video-lightbox-close" aria-label="Close video">&times;</button>
-        <iframe src="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <div class="video-lightbox-frame-wrap"></div>
     </div>
 </div>
 
 <script>
 (function() {
     var lb = document.getElementById('videoLightbox');
-    var frame = lb.querySelector('iframe');
+    var wrap = lb.querySelector('.video-lightbox-frame-wrap');
     function openVid(id) {
-        frame.src = 'https://player.vimeo.com/video/' + id + '?autoplay=1';
+        // Build a fresh iframe each time to avoid any leftover state.
+        wrap.innerHTML = '<iframe src="https://player.vimeo.com/video/' + encodeURIComponent(id) + '?autoplay=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
         lb.classList.add('open');
         document.body.style.overflow = 'hidden';
     }
     function closeVid() {
-        frame.src = '';
+        // Fully remove the iframe so the video stops and nothing lingers.
+        wrap.innerHTML = '';
         lb.classList.remove('open');
         document.body.style.overflow = '';
     }
     document.querySelectorAll('.video-thumb[data-vimeo-id]').forEach(function(el) {
         el.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             openVid(el.getAttribute('data-vimeo-id'));
         });
     });
