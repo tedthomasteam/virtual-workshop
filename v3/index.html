@@ -75,6 +75,54 @@
             white-space: nowrap;
         }
 
+        /* Countdown Timer in Header */
+        .header-countdown {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .header-countdown .cd-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #E9CE38;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            white-space: nowrap;
+        }
+        .header-countdown .cd-blocks {
+            display: flex;
+            gap: 5px;
+        }
+        .header-countdown .cd-block {
+            background: #fff;
+            border-radius: 4px;
+            padding: 4px 7px 3px;
+            min-width: 42px;
+            text-align: center;
+            line-height: 1;
+        }
+        .header-countdown .cd-num {
+            display: block;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: #104E97;
+        }
+        .header-countdown .cd-lbl {
+            display: block;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 9px;
+            color: #555;
+            margin-top: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
         /* ===== 2. HERO ===== */
         .hero {
             background: #fff;
@@ -881,6 +929,11 @@
             .header-logo img { height: 35px; }
             .header-text { font-size: 12px; order: 3; flex-basis: 100%; }
             .header-cta .btn { font-size: 12px; padding: 8px 15px; }
+            .header-countdown { flex: 1 1 100%; order: 3; margin-top: 4px; }
+            .header-countdown .cd-label { font-size: 9px; margin-bottom: 2px; }
+            .header-countdown .cd-block { min-width: 38px; padding: 3px 5px; }
+            .header-countdown .cd-num { font-size: 15px; }
+            .header-countdown .cd-lbl { font-size: 8px; }
 
             .hero h2 { font-size: 26px; }
             .hero h2.black { font-size: 24px; }
@@ -963,8 +1016,14 @@
                 <img src="https://e8akcjvdmgt.exactdn.com/wp-content/uploads/2025/04/Ted-Thomas-Header-Logo-NEW.png?strip=all" alt="Ted Thomas Logo">
             </a>
         </div>
-        <div class="header-text">
-            6-Hour Virtual Workshop | Every Saturday at 11 AM Eastern
+        <div class="header-countdown" id="headerCountdown" aria-live="polite">
+            <div class="cd-label">Next Workshop Starts In</div>
+            <div class="cd-blocks">
+                <div class="cd-block"><span class="cd-num" data-cd="days">00</span><span class="cd-lbl">Days</span></div>
+                <div class="cd-block"><span class="cd-num" data-cd="hours">00</span><span class="cd-lbl">Hours</span></div>
+                <div class="cd-block"><span class="cd-num" data-cd="mins">00</span><span class="cd-lbl">Min</span></div>
+                <div class="cd-block"><span class="cd-num" data-cd="secs">00</span><span class="cd-lbl">Sec</span></div>
+            </div>
         </div>
         <div class="header-cta">
             <a href="https://tedthomas.com/cfgsk-order-vw/" class="btn">Join This Saturday for $7</a>
@@ -1277,6 +1336,83 @@
     document.querySelectorAll('.video-thumb').forEach(function(thumb) {
         mo.observe(thumb, { childList: true, subtree: true });
     });
+})();
+</script>
+
+<!-- Header Countdown: next Saturday at 11:00 AM Eastern, auto-resetting -->
+<script>
+(function() {
+    var root = document.getElementById('headerCountdown');
+    if (!root) return;
+    var daysEl = root.querySelector('[data-cd="days"]');
+    var hoursEl = root.querySelector('[data-cd="hours"]');
+    var minsEl = root.querySelector('[data-cd="mins"]');
+    var secsEl = root.querySelector('[data-cd="secs"]');
+    var dayMap = { Sunday:0, Monday:1, Tuesday:2, Wednesday:3, Thursday:4, Friday:5, Saturday:6 };
+
+    // Compute the UTC timestamp of the next Saturday 11:00 AM America/New_York (handles EST/EDT).
+    function getNextSaturday11amET() {
+        var now = new Date();
+        var fmt = new Intl.DateTimeFormat('en-US', {
+            timeZone: 'America/New_York',
+            year: 'numeric', month: '2-digit', day: '2-digit',
+            weekday: 'long',
+            hour: '2-digit', minute: '2-digit', second: '2-digit',
+            hour12: false
+        });
+        var parts = {};
+        fmt.formatToParts(now).forEach(function(p) { parts[p.type] = p.value; });
+        var etDay = dayMap[parts.weekday];
+        var etHour = parseInt(parts.hour, 10);
+        // daysAhead: how many days from today (in ET) until the next Saturday
+        var daysAhead = (6 - etDay + 7) % 7;
+        // If today is Saturday and the 11 AM cutoff has passed, skip to next Saturday
+        if (daysAhead === 0 && etHour >= 11) daysAhead = 7;
+
+        var etYear = parseInt(parts.year, 10);
+        var etMonth = parseInt(parts.month, 10);
+        var etDate = parseInt(parts.day, 10);
+
+        // Walk the calendar date forward by daysAhead using UTC arithmetic (no DST pitfalls on date math)
+        var base = new Date(Date.UTC(etYear, etMonth - 1, etDate));
+        base.setUTCDate(base.getUTCDate() + daysAhead);
+        var tY = base.getUTCFullYear();
+        var tM = base.getUTCMonth();
+        var tD = base.getUTCDate();
+
+        // Find the UTC instant that corresponds to 11:00 AM ET on that date.
+        // Probe with 11:00 UTC on that date and measure how it shows in ET to compute the offset.
+        var probeUTC = Date.UTC(tY, tM, tD, 11, 0, 0);
+        var probeETHour = parseInt(new Intl.DateTimeFormat('en-US', {
+            timeZone: 'America/New_York',
+            hour: '2-digit', hour12: false
+        }).format(new Date(probeUTC)), 10);
+        // If 11:00 UTC appears as probeETHour in ET, shift by (11 - probeETHour) hours to land at 11:00 ET.
+        return probeUTC + (11 - probeETHour) * 3600000;
+    }
+
+    function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+    var targetMs = getNextSaturday11amET();
+
+    function tick() {
+        var diff = targetMs - Date.now();
+        if (diff <= 0) {
+            targetMs = getNextSaturday11amET();
+            diff = targetMs - Date.now();
+        }
+        var days = Math.floor(diff / 86400000);
+        var hours = Math.floor((diff % 86400000) / 3600000);
+        var mins = Math.floor((diff % 3600000) / 60000);
+        var secs = Math.floor((diff % 60000) / 1000);
+        daysEl.textContent = pad(days);
+        hoursEl.textContent = pad(hours);
+        minsEl.textContent = pad(mins);
+        secsEl.textContent = pad(secs);
+    }
+
+    tick();
+    setInterval(tick, 1000);
 })();
 </script>
 
